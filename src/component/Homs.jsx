@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {useEffect,useState} from 'react'
 import { setBlogs,setMyBlogs} from '../redux/Blog/blogSlice.js'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 function Homs() {
   const dispatch = useDispatch();
@@ -44,18 +45,20 @@ function Homs() {
   return (
     <div className='flex gap-4 flex-wrap justify-center items-center my-10 w-screen p-3'>
       {blogs.map((bl,index)=>(index<6 &&
-          <div  key={index} id={index} className="card p-2 bg-base-100 md:w-1/3 h-96 shadow-xl w-full">
-        <div className="card-body">
-          <h2 className="card-title">{bl.title}</h2>
-          <p>{bl.content.slice(0,20)}{bl.content.length>20?"...":""}</p>
-        </div>
-        <figure>
-          <img
-          className='w-full h-full'
-            src={bl.image}
-            alt={bl.title} />
-        </figure>
+        <Link to={`/page/${bl._id}`} className=" bg-base-100 md:w-1/3 h-96 shadow-xl w-full rounded-md hover:scale-110" key={index}>
+        <div  key={index} id={index} className="card max-w-full max-h-full  p-2">
+      <div className="card-body">
+        <h2 className="card-title">{bl.title}</h2>
+        <p>{bl.content.slice(0,20)}{bl.content.length>20?"...":""}</p>
       </div>
+      <figure className='h-full'>
+        <img
+          className='w-full h-auto'
+          src={bl.image}
+          alt={bl.title} />
+      </figure>
+    </div>
+    </Link>
       ),)}
     </div>
   )

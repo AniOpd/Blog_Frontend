@@ -71,7 +71,7 @@ function Page() {
               <p className="text-gray-400 text-sm font-thin">created At-{time}</p>
             {post.author &&<p className="text-gray-400 text-sm font-thin">By {post.author}</p>}
               </div>
-              <Link to="/">
+              <Link to="/blogs">
                 <button className="btn">Go Back</button>
               </Link>
             </div>
