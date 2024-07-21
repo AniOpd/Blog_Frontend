@@ -67,7 +67,7 @@ function Header() {
             }
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">BlogDemo</a>
         </div>
         <div className="navbar-end">
         <div className="navbar-center hidden lg:flex lg:mr-8">
