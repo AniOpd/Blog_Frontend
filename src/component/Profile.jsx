@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import {useEffect,useState} from 'react'
 import { useSelector } from 'react-redux'
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 
 function Profile() {
   const {user} = useSelector(state=>state.auth);
@@ -27,7 +26,6 @@ function Profile() {
       <div className='card'>
         <div className='card-body flex justify-center items-center md:w-1/3'>
           <h2 className='card-title'>Profile</h2>
-          <PermIdentityIcon style={{fontSize:'100px'}}/>
           <p>Name: {profile.name}</p>
           <p>Email: {profile.email}</p>
         </div>
