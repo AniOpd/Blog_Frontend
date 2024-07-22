@@ -53,24 +53,24 @@ function Page() {
 
   return (
     <div>
-      <div className="flex justify-center items-center h-screen p-2 w-full">
-        <div className="bg-gray-300 p-5 md:w-2/3 w-full flex flex-col rounded-2xl gap-5">
+      <div className="flex justify-center items-center h-full p-2 w-full">
+        <div className="bg-gray-300 p-5 md:w-3/4 w-full flex flex-col rounded-2xl gap-5">
           <h1 className="text-2xl font-bold mt-5">{post.title}</h1>
-          <div className="flex gap-5 md:flex-row flex-col">
+          <div className="flex gap-5 flex-col items-center">
             <img
               src={post.image}
               alt=""
-              className=" md:w-2/5 w-full h-56 rounded-lg"
+              className=" w-9/12 max-h-96 rounded-lg m-0 p-0"
             />
-            <p className="text-gray-500 mt-5">{post.content}</p>
-          </div>
-          <div className="flex flex-col items-center w-full">
-            <div className="flex justify-between w-full">
-              <div>
+            <div className="w-full">
               <p className="text-gray-400 text-sm font-thin">{date}</p>
               <p className="text-gray-400 text-sm font-thin">created At-{time}</p>
             {post.author &&<p className="text-gray-400 text-sm font-thin">By {post.author}</p>}
               </div>
+            <p className="text-gray-500 mt-5">{post.content}</p>
+          </div>
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full flex justify-end">
               <Link to="/blogs">
                 <button className="btn">Go Back</button>
               </Link>

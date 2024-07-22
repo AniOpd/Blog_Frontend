@@ -14,15 +14,16 @@ function MyBlogs() {
   return (
     <div>
         <div className='flex gap-4 flex-wrap justify-center items-center'>
-    {myBlogs.map((bl,index)=>(
+        {myBlogs.map((bl,index)=>(
     <Link to={`/page/${bl._id}`} className=" bg-base-100 md:w-1/3 h-96 shadow-xl w-full rounded-md hover:scale-110" key={index}>
         <div  key={index} id={index} className="card max-w-full max-h-full  p-2">
       <div className="card-body">
-        <h2 className="card-title">{bl.title}</h2>
-        <p>{bl.content}</p>
+        <h2 className="card-title">{bl.title.slice(0,20)}{bl.title.length>20?"...":""}</h2>
+        <p>{bl.content.slice(0,20)}{bl.content.length>20?"...":""}</p>
       </div>
-      <figure>
+      <figure className='h-full'>
         <img
+          className='w-full h-auto'
           src={bl.image}
           alt={bl.title} />
       </figure>
