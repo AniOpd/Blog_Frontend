@@ -16,7 +16,7 @@ function AllBlogs() {
    const fetchBlogs = async()=>{
     try{
       const res = await axios.get(`${url}blogs/getblogs`);
-      dispatch(setBlogs(res.data.blogs));
+      dispatch(setBlogs(res.data));
       if(user){
         res.data.blogs.map((bl)=>{
           if(bl.userId==user){
