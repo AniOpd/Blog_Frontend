@@ -45,9 +45,9 @@ function AllBlogs() {
   }
 
   return (
-    <div className='flex gap-4 flex-wrap justify-center items-center my-10'>
+    <div className='grid md:grid-cols-3 grid-cols-1 gap-5 m-5'>
     {blogs.map((bl,index)=>(
-    <Link to={`/page/${bl._id}`} className=" bg-base-100 md:w-1/3 h-96 shadow-xl w-full rounded-md hover:scale-110" key={index}>
+    <Link to={`/page/${bl._id}`} className=" bg-base-100 h-96 shadow-xl w-full rounded-md hover:scale-110" key={index}>
         <div  key={index} id={index} className="card max-w-full max-h-full  p-2">
       <div className="card-body">
         <h2 className="card-title">{bl.title.slice(0,20)}{bl.title.length>20?"...":""}</h2>

@@ -54,7 +54,7 @@ function Page() {
   return (
     <div>
       <div className="flex justify-center items-center h-full p-2 w-full">
-        <div className="bg-gray-300 p-5 md:w-3/4 w-full flex flex-col rounded-2xl gap-5">
+        <div className="bg-gray-300 p-5 md:w-11/12 w-full flex flex-col rounded-2xl gap-5">
           <h1 className="text-2xl font-bold mt-5">{post.title}</h1>
           <div className="flex gap-5 flex-col items-center">
             <img
