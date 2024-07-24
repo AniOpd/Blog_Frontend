@@ -19,7 +19,7 @@ function Homs() {
       console.log(res);
       dispatch(setBlogs(res.data));
       if(user){
-        res.data.blogs.map((bl)=>{
+        res.data.map((bl)=>{
           if(bl.userId==user){
             blog.push(bl);
           }
