@@ -51,6 +51,7 @@ function Page() {
     ? new Date(post.date).toLocaleTimeString()
     : new Date().toLocaleTimeString();
 
+
   return (
     <div>
       <div className="flex justify-center items-center h-full p-2 w-full">
@@ -67,10 +68,10 @@ function Page() {
               <p className="text-gray-400 text-sm font-thin">created At-{time}</p>
             {post.author &&<p className="text-gray-400 text-sm font-thin">By {post.author}</p>}
               </div>
-            <p className="text-gray-500 mt-5">{post.content}</p>
+              <div dangerouslySetInnerHTML={{__html:post.content}} className="w-full" />
           </div>
           <div className="flex flex-col items-center w-full">
-            <div className="w-full flex justify-end">
+            <div className="w-full flex md:justify-end justify-center m-2">
               <Link to="/blogs">
                 <button className="btn">Go Back</button>
               </Link>

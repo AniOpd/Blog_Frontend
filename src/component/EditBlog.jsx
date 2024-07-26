@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useEffect, useRef,useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector,useDispatch } from "react-redux";
 import { logout } from "../redux/Auth/authSlice";
+import JoditEditor from 'jodit-react';
 
 function EditBlog() {
   const user = useSelector((state) => state.auth.user);
@@ -12,12 +13,18 @@ function EditBlog() {
   const [image, setImage] = React.useState(null);
   const url=import.meta.env.VITE_BASE_URL;
   const post = useSelector((state) => state.blog.blog);
+  const editor = useRef(null);
+	const [content, setContent] = useState('');
+
+
+  useEffect(()=>{
+    setContent(post.content);
+  },[])
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target.title.value;
-    const content = e.target.content.value;
     
     const data = new FormData();
     data.append("file", image);
@@ -72,19 +79,19 @@ function EditBlog() {
           style={{ height: "200px" }}
         />
       )}
-        <form onSubmit={handleSubmit} className="md:w-2/3 w-full flex flex-col justify-center items-center">
+        <form onSubmit={handleSubmit} className=" w-full flex flex-col justify-center items-center">
           <div className="form-group w-full">
             <label htmlFor="title">Title</label>
             <input type="text" className="form-control w-full" id="title" defaultValue={post.title}/>
           </div>
           <div className="form-group w-full">
             <label htmlFor="content">Content</label>
-            <textarea
-              className="form-control w-full"
-              id="content"
-              rows="3"
-               defaultValue={post.content} 
-            ></textarea>
+            <JoditEditor
+			ref={editor}
+			value={content}
+			onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+			onChange={newContent => {setContent(newContent)}}
+		/>
           </div>
           <div className="form-group w-full">
             <label htmlFor="image">Image</label>

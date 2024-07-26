@@ -50,8 +50,7 @@ function Homs() {
     <Link to={`/page/${bl._id}`} className=" bg-base-100 md:w-1/2 h-96 shadow-xl w-full rounded-md hover:scale-110" key={index}>
         <div  key={index} id={index} className="card w-full max-h-full  p-2">
       <div className="card-body">
-        <h2 className="card-title">{bl.title.slice(0,20)}{bl.title.length>20?"...":""}</h2>
-        <p>{bl.content.slice(0,20)}{bl.content.length>20?"...":""}</p>
+      <h2 className="card-title">{bl.title}</h2>
       </div>
       <figure className='h-full'>
         <img
