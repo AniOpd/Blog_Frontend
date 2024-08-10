@@ -22,7 +22,6 @@ This is a full-stack Blog Application built with React, Redux, Tailwind CSS, and
 - Password Reset via Email
 - Create, Edit, Delete Blogs
 - View All Blogs and Individual Blog Pages
-- Like and Comment on Blogs
 - User Profile Page
 - Responsive Design
 
