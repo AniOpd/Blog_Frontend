@@ -122,7 +122,6 @@ npm run dev
 2. Register a new user or login with existing credentials.
 3. Create, edit, delete, and view blogs.
 4. Reset your password if needed.
-5. Like and comment on blogs.
 
 ## API Endpoints
 
