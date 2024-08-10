@@ -15,7 +15,6 @@ This is a full-stack Blog Application built with React, Redux, Tailwind CSS, and
 - [API Endpoints](#api-endpoints)
 - [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
