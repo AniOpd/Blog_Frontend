@@ -4,7 +4,7 @@
 
 # Blog App
 
-This is a full-stack Blog Application built with React, Redux, Tailwind CSS, and Node.js. The application allows users to register, login, create, edit, delete, and view blogs. Users can also reset their passwords and like or comment on blogs.
+This is a full-stack Blog Application built with React, Redux, Tailwind CSS, and Node.js. The application allows users to register, login, create, edit, delete, and view blogs. Users can also reset their passwords.
 
 ## Table of Contents
 
@@ -59,8 +59,8 @@ This is a full-stack Blog Application built with React, Redux, Tailwind CSS, and
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/blog-app.git
-cd blog-app
+git clone https://github.com/AniOpd/Blog_Backend
+git clone https://github.com/AniOpd/Blog_Frontend
 ```
 
 ### Backend Setup
@@ -185,10 +185,3 @@ blog-app/
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License.
-```
-
-Feel free to customize this README file according to your specific needs and preferences.
